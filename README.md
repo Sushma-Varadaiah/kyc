@@ -24,7 +24,7 @@
 -	`kyc-ethereum-network` - contains the genesis block creation details for the network.
 -	`kyc-truffle-project` - contains the migration scripts, smart contracts and network configuration file(`truffle-config.js`).
 
-The smart contracts are written in ***Solidity programming language.*** The development and deployment of the voting solidity smart contracts will follow the below stages - 
+The smart contracts are written in ***Solidity programming language.*** The development and deployment of the KYC solidity smart contracts will follow the below stages - 
 
 1.	Setting Up a Private Ethereum Blockchain.
 2.	Deploying Smart Contracts on a Private Blockchain using Truffle.
@@ -68,9 +68,9 @@ When the mining starts we need to unlock the accounts.
 
 ### 2.	Deploying Smart Contracts on a Private Blockchain using Truffle ###
 
-Truffle's local development environment. Using Truffle, you will compile, deploy and test the voting smart contracts on the Geth client. Once you have deployed a smart contract on a Geth client, the contract is available to the entire network.
+Truffle's local development environment. Using Truffle, you will compile, deploy and test the KYC smart contracts on the Geth client. Once you have deployed a smart contract on a Geth client, the contract is available to the entire network.
 
-`contracts` folder inside `kyc-truffle-project` contains the copy of the Voting solidity file. `migrations` folder contains the migration script for voting smart contract. `truffle-config.js` file contains the network property settings.
+`contracts` folder inside `kyc-truffle-project` contains the copy of the Voting solidity file. `migrations` folder contains the migration script for KYC smart contract. `truffle-config.js` file contains the network property settings.
 
 A.	Compile the contract using the below command
 
