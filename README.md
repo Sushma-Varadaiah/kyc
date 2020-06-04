@@ -61,7 +61,7 @@ The above command will generate the datadir folder.
 
 When the mining starts we need to unlock the accounts.
 
-***D.	Start the mining process using the below command and keep the mining process running as we have to deploy Voting.sol on to this network.***
+***D.	Start the mining process using the below command and keep the mining process running as we have to deploy KYC.sol on to this network.***
 
 >	miner.start()
 
@@ -70,7 +70,7 @@ When the mining starts we need to unlock the accounts.
 
 Truffle's local development environment. Using Truffle, you will compile, deploy and test the KYC smart contracts on the Geth client. Once you have deployed a smart contract on a Geth client, the contract is available to the entire network.
 
-`contracts` folder inside `kyc-truffle-project` contains the copy of the Voting solidity file. `migrations` folder contains the migration script for KYC smart contract. `truffle-config.js` file contains the network property settings.
+`contracts` folder inside `kyc-truffle-project` contains the copy of the KYC solidity file. `migrations` folder contains the migration script for KYC smart contract. `truffle-config.js` file contains the network property settings.
 
 A.	Compile the contract using the below command
 
