@@ -174,4 +174,4 @@ Once the customer has enough votes he/she will be added to the valid KYC list.
 ***14. Remove a customer in case of invalid KYC***
 >	kyc.removeCustomer(“sushma”)
 
-Please check out [this article](##todo) for the details of the KYC verification process.
+Please check out [this article](https://medium.com/@sushmarajuvaradaiah/a-decentralised-kyc-verification-process-for-banks-f47bee0a5a9f) for the details of the KYC verification process.
