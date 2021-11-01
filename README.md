@@ -53,10 +53,6 @@ The above command will generate the datadir folder.
 
 >	personal.newAccount("HDFC")
 
->	personal.newAccount("IDFC")
-
->	personal.newAccount("DBS")
-
 >	personal.newAccount("KOTAK")
 
 When the mining starts we need to unlock the accounts.
@@ -97,15 +93,11 @@ A.	When truffle console opens, get the instance of contract using below command
 
 For each transaction that we trigger you will get a receipt from the blockchain network. Below are the sequence of function execution for KYC process.
 
-***1. Below are the 5 accounts that I have created.***
+***1. Below are the 3 accounts that I have created.***
 
 admin-0x37398bf5c3e6d42d4919b2517442bf025670ef82
 
 HDFC-0xd71e9de2a1a47a4ff58558753551e87e55515d31
-
-IDFC-0x48b936256b016701b71922ac2fb0d929c0cfe055
-
-DBS-0x2afcb67323d00536e6a8891deb667f38a34414f1
 
 KOTAK-0x937f6af0edeaa4f912647e9a57568a2a97559fba
 
@@ -114,11 +106,7 @@ KOTAK-0x937f6af0edeaa4f912647e9a57568a2a97559fba
 
 >	kyc.addBank(“HDFC”,”0xd71e9de2a1a47a4ff58558753551e87e55515d31”,”001”)
 
->	kyc.addBank(“IDFC”,”0x48b936256b016701b71922ac2fb0d929c0cfe055”,”002”)
-
->	kyc.addBank(“DBS”,”0x2afcb67323d00536e6a8891deb667f38a34414f1”,”003”)
-
->	kyc.addBank(“KOTAK”,”0x937f6af0edeaa4f912647e9a57568a2a97559fba”,”004”)
+>	kyc.addBank(“KOTAK”,”0x937f6af0edeaa4f912647e9a57568a2a97559fba”,”002”)
 
 ***3. Unlock bank accounts and execute the following to upvote a bank-Upvote for DBS from HDFC, IDFC, KOTAK***
 
@@ -126,23 +114,23 @@ KOTAK-0x937f6af0edeaa4f912647e9a57568a2a97559fba
 
 Rating of a bank goes up after upvotes from the other banks.
 
-***4. Unlock DBS bank account and execute the below command to add kyc request of a customer***
+***4. Unlock HDFC bank account and execute the below command to add kyc request of a customer***
 
->	kyc.addRequest(“sushma”,”sushmakychash”)
+>	kyc.addRequest(“deepti”,”deeptikychash”)
 
 Since the rating of bank DBS is higher DBS can add this customer.
 
-***5. Unlock DBS bank account and execute the below command to add kyc request of a customer***
+***5. Unlock Kotak bank account and execute the below command to add kyc request of a customer***
 
->	kyc.addCustomer(“sushma”,”sushmakychash”)
+>	kyc.addCustomer(“deepti”,”deeptikychash”)
 
 At this point other banks can vote for this customer to verify the validity of the KYC document that this customer has submitted.
 
 ***6. Upvote customer to validate the KYC information from different banks-Upvote from HDFC, IDFC, KOTAK***
 
-Unlock each account - HDFC, IDFC, KOTAK and give a vote to the customer KYC information.
+Unlock each account - HDFC, KOTAK and give a vote to the customer KYC information.
 
->	kyc.updateRatingCustomer(“sushma”)
+>	kyc.updateRatingCustomer(“deepti”)
 
 Once the customer has enough votes he/she will be added to the valid KYC list.
 
@@ -160,18 +148,18 @@ Once the customer has enough votes he/she will be added to the valid KYC list.
 
 ***10. Get the customer rating***
 
->	kyc.getCustomerRating(“sushma”)
+>	kyc.getCustomerRating(“deepti”)
 
 ***11. Set password for a customer***
->	kyc.setPasswordForCustomerData(“sushma”,”password”)
+>	kyc.setPasswordForCustomerData(“deepti”,”password”)
 
 ***12. Update customer KYC information***
->	kyc.modifyCustomer(“sushma”,”password”,”newSushmaKYCHash”)
+>	kyc.modifyCustomer(“deepti”,”password”,”newDeeptiKYCHash”)
 
 ***13. Retrieve customer KYC history***
->	kyc.retrieveAccessHistory(“sushma”)
+>	kyc.retrieveAccessHistory(“deepti”)
 
 ***14. Remove a customer in case of invalid KYC***
->	kyc.removeCustomer(“sushma”)
+>	kyc.removeCustomer(“deepti”)
 
-Please check out [this article](https://medium.com/@sushmarajuvaradaiah/a-decentralised-kyc-verification-process-for-banks-f47bee0a5a9f) for the details of the KYC verification process.
+
